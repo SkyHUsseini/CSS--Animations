@@ -1,0 +1,128 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid white;
+}
+
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg);
+} */
+
+/*TRYING ON MY OWN AFTER THE TUTORIAL*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 15rem;
+  border: 3px solid white;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 10rem;
+  height: 7px;
+  background: white;
+  border-radius: 1ch;
+  box-shadow: 0 1px 3px #333;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 7px;
+  background: white;
+  border-radius: 1ch;
+  box-shadow: 0 1px 3px #333;
+  transition: all 0.7s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-3rem);
+}
+.menu-btn__burger::after {
+  transform: translateY(3rem);
+}
+
+/*ANIMATION*/
+.menu-btn.open .menu-btn__burger {
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+  background-color: red;
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg);
+  background-color: red;
+  box-shadow: none;
+}
